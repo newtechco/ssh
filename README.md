@@ -148,6 +148,19 @@ dnscache.Bangtan.info(国外)
 IP地址
 内网IP:192.168.0.1（老系统) 192.168.137.1（新系统）
 
-密码:dhxt63Fxt6fn
+密码:Hdy673@418
 
-iodined.exe -c -f -d iodine -P dhxt63Fxt6fn 192.168.0/137.1 *（域名）
+
+
+iodined.exe -f -c -DDDD -d iodine -P Hdy673@418 192.168.0/137.1 *(所使用的域名)
+
+
+
+
+新的系统把提醒的服务关闭之后 通过添加服务的方式 用system权限 实现开机自启动。
+
+
+sc Create 自动启动 binPath= "cmd /K start  iodined.exe -f -c -DDDD -d iodine -P Hdy673@418 192.168.0/137.1 *(所使用的域名)" type= own type= interact start= AUTO  
+
+sc start 自动启动
+
