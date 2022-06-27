@@ -157,10 +157,18 @@ iodined.exe -f -c -DDDD -d iodine -P Hdy673@418 192.168.0/137.1 *(所使用的�
 
 
 
-新的系统把提醒的服务关闭之后 通过添加服务的方式 用system权限 实现开机自启动。
+把iodine复制到Windows目录下，然后把系统把提醒的服务关闭之后（github仓库文件里面 禁止服务那个）  通过添加服务的方式 用system权限 实现开机自启动。
 
 
-sc Create 自动启动 binPath= "cmd /K start  iodined.exe -f -c -DDDD -d iodine -P Hdy673@418 192.168.0/137.1 *(所使用的域名)" type= own type= interact start= AUTO  
+sc Create 自动启动 binPath= "cmd /K start  iodined.exe -f -c -DDDD -d iodine -P Hdy673@418 192.168.0/137.1 *(所使用的域名) 615209496.eu.org " type= own type= interact start= AUTO  
 
 sc start 自动启动
+
+
+原始批处理
+sc Create 自动启动 binPath= "cmd /K start" type= own type= interact start= AUTO  
+
+
+sc start 自动启动
+
 
